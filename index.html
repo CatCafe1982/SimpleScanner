@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Scanner 隱私權政策</title>
+  <meta name="description" content="Simple Scanner（簡單掃描）隱私權政策。">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f1eb;
+      --bg-accent: radial-gradient(circle at top left, rgba(196, 166, 128, 0.28), transparent 38%);
+      --panel: rgba(255, 255, 255, 0.74);
+      --panel-strong: rgba(255, 255, 255, 0.88);
+      --text: #1f2327;
+      --muted: #5f646c;
+      --line: rgba(255, 255, 255, 0.86);
+      --shadow: rgba(21, 24, 28, 0.12);
+      --accent: #8a6d53;
+      --accent-strong: #4d3d31;
+      --tag: rgba(138, 109, 83, 0.12);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --bg-accent: radial-gradient(circle at top left, rgba(128, 97, 69, 0.24), transparent 34%);
+        --panel: rgba(31, 34, 40, 0.86);
+        --panel-strong: rgba(37, 41, 48, 0.96);
+        --text: #f5efe6;
+        --muted: #b8b0a7;
+        --line: rgba(255, 255, 255, 0.08);
+        --shadow: rgba(0, 0, 0, 0.34);
+        --accent: #c8a889;
+        --accent-strong: #f1e5d7;
+        --tag: rgba(200, 168, 137, 0.16);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--text);
+      background:
+        var(--bg-accent),
+        linear-gradient(160deg, var(--bg), color-mix(in srgb, var(--bg) 82%, #000 18%));
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent-strong);
+    }
+
+    .wrap {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .hero {
+      padding: 28px;
+      border-radius: 32px;
+      background: linear-gradient(145deg, var(--panel-strong), var(--panel));
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 56px var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--tag);
+      color: var(--accent-strong);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 18px 0 10px;
+      font-family: "Iowan Old Style", "Times New Roman", serif;
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-card {
+      padding: 16px 18px;
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--panel) 78%, transparent);
+      border: 1px solid var(--line);
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .meta-card span,
+    .meta-card a {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .summary {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border-radius: 24px;
+      background: color-mix(in srgb, var(--tag) 78%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+    }
+
+    .summary strong {
+      color: var(--accent-strong);
+    }
+
+    nav {
+      margin-top: 28px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .sections {
+      display: grid;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    section {
+      padding: 26px 24px;
+      border-radius: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 36px var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    p,
+    li {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    p:last-child,
+    ul:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 1.25em;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 22px 24px;
+      border-radius: 26px;
+      background: linear-gradient(145deg, color-mix(in srgb, var(--panel) 92%, transparent), color-mix(in srgb, var(--panel-strong) 88%, transparent));
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100% - 20px, 960px);
+        padding-top: 20px;
+        padding-bottom: 32px;
+      }
+
+      .hero,
+      section,
+      .footer {
+        border-radius: 24px;
+      }
+
+      .hero {
+        padding: 22px;
+      }
+
+      .meta {
+        grid-template-columns: 1fr;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">Simple Scanner / 簡單掃描</div>
+      <h1>隱私權政策</h1>
+      <p>這份政策是寫給使用者看的，說明 <strong>Simple Scanner（簡單掃描）</strong> 在你使用掃描、匯出與分享功能時，會接觸到哪些資料、如何處理，以及你可以如何掌控自己的內容。</p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>開發者</strong>
+          <span>Hung Hua Yu</span>
+        </div>
+        <div class="meta-card">
+          <strong>聯絡開發者</strong>
+          <a href="mailto:cat.cafe1982@icloud.com">cat.cafe1982@icloud.com</a>
+        </div>
+        <div class="meta-card">
+          <strong>最後更新</strong>
+          <span>2026 年 3 月 29 日</span>
+        </div>
+      </div>
+
+      <div class="summary">
+        <strong>一句話版本：</strong>
+        Simple Scanner 以本機掃描與匯出為核心，不要求你建立帳號，不內建廣告或追蹤工具，也不會把你的掃描文件主動上傳到開發者的伺服器。
+      </div>
+
+      <nav aria-label="隱私權政策章節">
+        <ul>
+          <li><a href="#scope">適用範圍</a></li>
+          <li><a href="#collect">我們處理哪些資料</a></li>
+          <li><a href="#permission">使用哪些權限</a></li>
+          <li><a href="#storage">資料儲存與保留</a></li>
+          <li><a href="#sharing">分享與第三方服務</a></li>
+          <li><a href="#rights">你的選擇</a></li>
+          <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sections">
+      <section id="scope">
+        <h2>1. 這份政策適用於什麼</h2>
+        <p>本隱私權政策適用於 <strong>Simple Scanner（簡單掃描）</strong> 行動應用程式，以及這個 GitHub 頁面上公開的隱私權說明內容。</p>
+        <p>這份政策的目的是讓你清楚知道：當你使用掃描、合併頁面、匯出 PDF、匯出圖片或透過系統分享功能傳送檔案時，App 會如何處理相關資料。</p>
+      </section>
+
+      <section id="collect">
+        <h2>2. 我們會處理哪些資料</h2>
+        <p>Simple Scanner 的設計目標，是用盡量少的資料處理完成掃描工作。依目前版本的功能，App 可能接觸到以下內容：</p>
+        <ul>
+          <li>你透過相機掃描的文件影像，例如紙本文件、收據或證件影像。</li>
+          <li>你在 App 內輸入的文件名稱，用於匯出檔名。</li>
+          <li>App 為了產生 PDF 或 JPG 檔案而在裝置上建立的暫存輸出檔。</li>
+        </ul>
+        <p>Simple Scanner <strong>不要求你註冊帳號</strong>，也不內建會員系統。因此，App 不會因為使用流程而主動蒐集你的姓名、電話號碼、住址、聯絡人、定位資料或支付資訊。</p>
+      </section>
+
+      <section id="permission">
+        <h2>3. App 會使用哪些權限</h2>
+        <p>目前版本主要使用以下權限：</p>
+        <ul>
+          <li><strong>相機權限：</strong> 用來掃描文件、收據與證件。若你不允許相機權限，掃描功能將無法使用。</li>
+        </ul>
+        <p>除了你主動操作的掃描與匯出流程外，App 不會在背景偷偷擷取相機內容。</p>
+      </section>
+
+      <section id="processing">
+        <h2>4. 掃描內容如何被處理</h2>
+        <p>Simple Scanner 目前以 <strong>本機處理</strong> 為主。掃描、頁面合併、PDF 生成與圖片輸出，都是在你的裝置上完成。</p>
+        <p>依目前版本的設計，App <strong>不會主動把你的掃描內容上傳到開發者的伺服器</strong>，也沒有內建雲端同步、會員後台或遠端文件分析服務。</p>
+      </section>
+
+      <section id="storage">
+        <h2>5. 資料儲存與保留方式</h2>
+        <ul>
+          <li>你當前掃描的頁面會在 App 使用流程中留在裝置端，供你預覽、合併與匯出。</li>
+          <li>當你匯出 PDF 或圖片時，App 會在裝置的暫存空間建立檔案，讓你可以分享、儲存或傳送。</li>
+          <li>這些暫存檔可能會由系統在之後自動清理；如果你把檔案分享或儲存到其他位置，則會以你選擇的目的地為準。</li>
+          <li>如果你在 App 內按下清空，目前工作中的掃描頁面會從這次使用流程中移除；但你先前已匯出或已分享到其他地方的檔案，不會因此自動刪除。</li>
+        </ul>
+      </section>
+
+      <section id="sharing">
+        <h2>6. 分享功能與第三方服務</h2>
+        <p>當你使用 iOS 系統分享功能，將 PDF 或圖片傳送到其他 App、雲端硬碟、通訊軟體或電子郵件服務時，資料會交由你選擇的第三方服務接手處理。</p>
+        <p>一旦你主動將檔案分享出去，後續的保存方式、傳輸安全與資料使用規則，會受到該第三方服務自己的隱私權政策與使用條款約束。</p>
+        <p>依目前版本，Simple Scanner <strong>未整合廣告 SDK、分析 SDK 或第三方追蹤工具</strong>，也不會為了投放廣告或跨站追蹤而蒐集你的使用資料。</p>
+      </section>
+
+      <section id="rights">
+        <h2>7. 你可以如何掌控自己的資料</h2>
+        <ul>
+          <li>你可以隨時在裝置的系統設定中關閉相機權限。</li>
+          <li>你可以在 App 內清空目前掃描中的頁面。</li>
+          <li>你可以自行決定是否要匯出、分享或將檔案保存到其他服務。</li>
+          <li>如果你不希望資料離開裝置，可以只在本機掃描與檢視，不使用分享功能。</li>
+        </ul>
+      </section>
+
+      <section id="children">
+        <h2>8. 兒少隱私</h2>
+        <p>Simple Scanner 並不是以兒童為主要對象設計的服務。開發者不會故意透過本 App 蒐集未成年人的個人資料。</p>
+      </section>
+
+      <section id="changes">
+        <h2>9. 政策變更</h2>
+        <p>如果未來 App 的功能或資料處理方式有重大改變，這份隱私權政策也會一併更新。更新後的版本會以這個頁面為準，並調整上方的「最後更新」日期。</p>
+      </section>
+
+      <section id="contact">
+        <h2>10. 如何聯絡開發者</h2>
+        <p>如果你對這份隱私權政策，或對 Simple Scanner 的資料處理方式有任何問題，歡迎直接來信：</p>
+        <p><strong>開發者：</strong> Hung Hua Yu<br>
+        <strong>電子郵件：</strong> <a href="mailto:cat.cafe1982@icloud.com">cat.cafe1982@icloud.com</a></p>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>© Hung Hua Yu · Simple Scanner（簡單掃描）隱私權政策</p>
+    </footer>
+  </main>
+</body>
+</html>
